@@ -9,7 +9,22 @@
 		<div>
 			<h2>Welcome to Buzzmapp!</h2>
 		</div>
+		
+		<div id="map"></div>
+  <script>
+    var map;
 
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+          lat: 40.777260,
+          lng: -73.722650
+        },
+        zoom: 12
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe2W-45_hNzzJlqSfUx5O1Kq8o22FYpuE&callback=initMap" async defer></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</body>
 </html>
